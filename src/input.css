@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@layer theme {
+  :root {
+    --color-button: #1976d2;
+    --color-button-hover: #004181;
+    --color-card: #f5f5f5;
+  }
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}

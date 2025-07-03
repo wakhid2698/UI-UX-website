@@ -1,0 +1,398 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 800px;
+}
+
+/* Logo */
+.logo {
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+/* Login Card */
+.login-card {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 40px;
+  border: 1px solid #cbd6f6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  text-align: left;
+  font-size: 14px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.forgot-password {
+  font-size: 13px;
+  color: #4d7ed9;
+  text-decoration: none;
+  text-align: right;
+  display: block;
+}
+
+.sign-in {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.sign-in:hover {
+  background-color: #1762c4;
+}
+
+.divider {
+  margin: 10px 0;
+  font-size: 13px;
+  color: #888;
+}
+
+.google-btn {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.google-btn img {
+  height: 20px;
+}
+
+.register {
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.register a {
+  color: #4d7ed9;
+  text-decoration: none;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
+
+/*chat*/
+
+.chat-container {
+  width: 100%;
+  max-width: 1200px;
+  background: #fff;
+  border: 2px solid #2994f2;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  margin-bottom: 40px;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chat-header img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.chat-header h1 {
+  font-size: 20px;
+  color: #2994f2;
+}
+
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  display: flex;
+  max-width: 80%;
+}
+
+.bot {
+  align-self: flex-start;
+}
+
+.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.message-content {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.user .message-content {
+  background: #2994f2;
+  color: white;
+}
+
+.message img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.chat-input textarea {
+  flex: 1;
+  resize: none;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.chat-input input[type="file"] {
+  display: none;
+}
+
+.chat-input button {
+  background-color: #2994f2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.upload-btn img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/*dashboard admin*/
+
+.main-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* === Sidebar === */
+.sidebar {
+  width: 280px;
+  background-color: #fff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #ddd;
+}
+
+.logo-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.logo-motocare {
+  width: 140px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.logo-profile p {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #000;
+  font-size: 17px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.menu-item img {
+  width: 22px;
+  height: 22px;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background-color: #f0f0f0;
+}
+
+.logout {
+  margin-top: auto;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.logout a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.logout img {
+  width: 20px;
+  height: 20px;
+}
+
+.logout a:hover {
+  background-color: #eee;
+}
+
+/* === Content Area === */
+.content {
+  flex: 1;
+  padding: 40px 60px;
+  overflow-y: auto;
+}
+
+/* Cards */
+.info-cards {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  width: 280px;
+  height: 160px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .value {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.card .label {
+  font-size: 18px;
+  color: #444;
+  margin-top: 12px;
+}
+
+.card-aktif .dot {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 12px;
+  height: 12px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+/* Table Section */
+.login-section h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+thead {
+  background-color: #d29b06;
+  color: #fff;
+}
+
+th, td {
+  padding: 14px 18px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+tbody td {
+  font-size: 14px;
+}

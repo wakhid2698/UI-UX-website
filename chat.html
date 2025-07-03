@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex justify-center pt-10 min-h-screen">
+    <div
+      class="w-full max-w-5xl bg-[#F8FAFC] border-2 border-gray-100 rounded-xl p-5 flex flex-col h-[90vh] mb-10"
+    >
+      <div class="flex items-center mb-5">
+        <img
+          src="images/Logo-Motocare-4x.png"
+          alt="Motocare Logo"
+          class="h-10 mr-3"
+        />
+      </div>
+
+      <div
+        id="chat-box"
+        class="flex-1 overflow-y-auto pr-3 flex flex-col gap-2"
+      >
+        <!-- Messages appear here -->
+      </div>
+
+      <div class="flex items-center gap-3 mt-4">
+        <div
+          class="relative flex flex-1 border border-gray-300 shadow-lg rounded-2xl px-4 py-3 bg-white"
+        >
+          <!-- Icon diatur posisi -->
+          <label for="image-input" class="absolute left-4 top-3 cursor-pointer">
+            <img src="images/Paperclip.svg" alt="Upload" class="w-5 h-5" />
+          </label>
+
+          <input type="file" id="image-input" accept="image/*" class="hidden" />
+
+          <!-- Textarea diberi padding kiri agar tidak nabrak icon -->
+          <textarea
+            id="user-input"
+            rows="3"
+            placeholder="Masukkan pesan..."
+            class="flex-1 resize-none outline-none text-base pl-10"
+          ></textarea>
+          <div id="image-preview" class="mt-2"></div>
+        </div>
+        <button
+          onclick="sendMessage()"
+          class="bg-[#1976d2] text-white font-medium px-5 py-2 rounded-3xl hover:bg-[#004181] flex items-center gap-2"
+        >
+          <span>Send</span>
+          <img
+            src="images/PaperPlaneRight.svg"
+            alt="Send Icon"
+            class="w-4 h-4"
+          />
+        </button>
+      </div>
+    </div>
+
+    <script src="/src/main.js"></script>
+  </body>
+</html>

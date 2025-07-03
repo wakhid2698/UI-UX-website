@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motocare - Solusi Motormu</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      :root {
+        --color-button: #1976d2;
+        --color-button-hover: #004181;
+        --color-card: #f5f5f5;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex-shrink-0">
+            <a href="#">
+              <img
+                src="images/Logo-Motocare-4x.png"
+                alt="Logo Motocare"
+                class="h-10"
+              />
+            </a>
+          </div>
+          <!-- Tambahkan class relative pada nav parent -->
+          <nav class="hidden md:flex items-center space-x-8 relative">
+            <a href="#" class="hover:text-blue-600 transition">Beranda</a>
+            <a href="#tentang-kami" class="hover:text-blue-600 transition"
+              >Tentang Kami</a
+            >
+
+            <!-- Dropdown Layanan -->
+            <div class="relative group">
+              <button
+                id="dropdownButton"
+                class="flex items-center gap-1 text-black hover:text-blue-600 transition focus:outline-none"
+              >
+                Layanan
+                <img
+                  src="images/icon panah bawah.svg"
+                  alt="panah bawah"
+                  class="w-3 h-3"
+                />
+              </button>
+
+              <!-- Dropdown Menu -->
+              <div
+                id="dropdownMenu"
+                class="absolute top-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg w-44 hidden flex-col z-50"
+              >
+                <a
+                  href="konsultasi.html"
+                  class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >Konsultasi</a
+                >
+                <a
+                  href="edukasi1.html"
+                  class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >Edukasi</a
+                >
+              </div>
+            </div>
+
+            <a href="profil.html">
+              <button
+                class="bg-[var(--color-button)] hover:bg-[var(--color-button-hover)] text-white px-12 py-2 rounded-lg transition"
+              >
+                Profil
+              </button>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+      class="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-12 pt-32 max-w-7xl mx-auto"
+    >
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1
+          class="font-semibold text-7xl md:text-5xl text-black mb-4 leading-tight"
+        >
+          Solusi Motormu <br />
+          ada di Motocare
+        </h1>
+        <p class="text-black font-medium text-2xl leading-relaxed pr-4">
+          Bingung dengan kondisi motor anda? <br />
+          <span class="inline-block">
+            Tenang, kami hadir untuk bantu. Cek gejala motor sendiri, baca tips
+            perawatan, atau konsultasi langsung dengan mekanik bengkel dulu
+            tanpa harus ke mana-mana.
+          </span>
+        </p>
+      </div>
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <img
+          src="images/ilustrasi-motor.svg"
+          alt="Ilustrasi Motor"
+          class="w-full max-w-xl mx-auto"
+        />
+      </div>
+    </section>
+
+    <!-- GALLERY SCROLL OTOMATIS -->
+    <section class="px-6 pb-16 max-w-7xl mx-auto">
+      <div id="autoScrollGallery" class="overflow-x-auto no-scrollbar">
+        <div class="flex gap-10 min-w-max">
+          <img
+            src="images/Iklan-1.png"
+            class="h-[235px] w-[427px] object-cover rounded-lg shadow-md flex-shrink-0"
+          />
+          <img
+            src="images/Iklan-2.png"
+            class="h-[235px] w-[427px] object-cover rounded-lg shadow-md flex-shrink-0"
+          />
+          <img
+            src="images/iklan-3.png"
+            class="h-[235px] w-[427px] object-cover rounded-lg shadow-md flex-shrink-0"
+          />
+          <img
+            src="images/iklan-4.png"
+            class="h-[235px] w-[427px] object-cover rounded-lg shadow-md flex-shrink-0"
+          />
+          <!-- Ulangi untuk efek infinite -->
+          <img
+            src="images/Iklan-1.png"
+            class="h-[235px] w-[427px] object-cover rounded-lg shadow-md flex-shrink-0"
+          />
+          <img
+            src="images/Iklan-2.png"
+            class="h-[235px] w-[427px] object-cover rounded-lg shadow-md flex-shrink-0"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUSI MOTOR SEHATMU -->
+    <section id="tentang-kami" class="px-6 py-16 max-w-7xl mx-auto">
+      <div
+        class="flex flex-col md:flex-row items-center md:items-start justify-between gap-10"
+      >
+        <!-- Kiri -->
+        <div class="md:w-1/3 text-center md:text-left">
+          <h2 class="text-3xl font-bold mb-4">Solusi Motor Sehatmu</h2>
+          <p class="text-[#000] text-base">
+            Temukan layanan konsultasi dan edukasi perawatan motor dengan mudah.
+          </p>
+        </div>
+
+        <!-- Card -->
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Card Konsultasi -->
+          <div
+            id="cardkonsultasi"
+            class="p-4 rounded-3xl bg-[var(#f5f5f5)] shadow-md flex items-center justify-between w-[315px] transition hover:shadow-xl hover:-translate-y-1 duration-300 cursor-pointer"
+          >
+            <div class="flex items-center gap-4">
+              <img
+                src="images/icon-konsultasi.svg"
+                alt="Konsultasi"
+                class="w-10 h-10"
+              />
+              <div>
+                <p class="font-semibold text-lg text-black">Konsultasi</p>
+                <p class="text-sm pr-2 text-[#000]">
+                  Bingung Konsultasi? Yuk cari di sini
+                </p>
+              </div>
+            </div>
+            <div class="text-[#000] text-sm">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+
+          <!-- Card Edukasi -->
+          <div
+            id="cardEdukasi"
+            class="p-4 rounded-3xl shadow-md flex items-center justify-between w-[315px] transition hover:shadow-xl hover:-translate-y-1 duration-300 cursor-pointer"
+          >
+            <div class="flex items-center gap-4">
+              <img
+                src="images/icon-edukasi.svg"
+                alt="Edukasi"
+                class="w-10 h-10"
+              />
+              <div>
+                <p class="font-semibold text-lg text-black">Edukasi</p>
+                <p class="text-sm text-[#000]">
+                  Belajar mengenal perawatan motor
+                </p>
+              </div>
+            </div>
+            <div class="text-[#000] text-sm">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SATU TUJUAN -->
+    <section class="bg-[#e5a800] py-16 px-6">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10"
+      >
+        <div class="md:w-1/2">
+          <img
+            src="images/ilustrasi-leptop.svg"
+            alt="Ilustrasi Edukasi"
+            class="w-full max-w-md mx-auto"
+          />
+        </div>
+
+        <div class="md:w-1/2 text-center">
+          <h2 class="text-3xl font-bold mb-4 text-black">
+            Satu Tujuan, Motor Terawat
+          </h2>
+          <p class="text-black text-2xl leading-relaxed mb-6">
+            Motocare adalah platform yang fokus pada edukasi dan konsultasi
+            perawatan motor. Di sini, kamu bisa belajar merawat motor dengan
+            benar, konsultasi langsung dengan mekanik, dan jadi lebih paham soal
+            motor kesayanganmu.Simpel, praktis, dan bisa diakses kapan aja.
+          </p>
+          <button
+            class="w-full max-w-[244px] bg-[var(--color-button)] hover:bg-[var(--color-button-hover)] text-white font-medium px-6 py-2 rounded-[10px] transition"
+          >
+            Kritik dan Saran
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONI -->
+    <section class="px-6 py-16 max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">Apa Kata Mereka?</h2>
+
+      <div id="testimonialScroll" class="overflow-x-auto no-scrollbar">
+        <div class="flex gap-6 min-w-max">
+          <div
+            class="h-56 w-[370px] bg-[#f5f5f5] rounded-2xl p-6 shadow-md flex-shrink-0"
+          >
+            <p class="text-base italic">
+              "Motocare sangat membantu saya yang awam soal mesin motor!"
+            </p>
+            <p class="text-sm text-gray-700 mt-4 font-semibold">–</p>
+          </div>
+          <div
+            class="h-56 w-[370px] bg-[#f5f5f5] rounded-2xl p-6 shadow-md flex-shrink-0"
+          >
+            <p class="text-base italic">
+              "Suka banget fitur edukasinya, jadi makin paham ganti oli
+              sendiri."
+            </p>
+            <p class="text-sm text-gray-700 mt-4 font-semibold">–</p>
+          </div>
+          <div
+            class="h-56 w-[370px] bg-[#f5f5f5] rounded-2xl p-6 shadow-md flex-shrink-0"
+          >
+            <p class="text-base italic">
+              "Cepat tanggap dan jelas, konsultasi teknisnya mantap."
+            </p>
+            <p class="text-sm text-gray-700 mt-4 font-semibold">–</p>
+          </div>
+          <div
+            class="h-56 w-[370px] bg-[#f5f5f5] rounded-2xl p-6 shadow-md flex-shrink-0"
+          >
+            <p class="text-base italic">
+              "Fitur simulasi biaya servis sangat memudahkan budgeting!"
+            </p>
+            <p class="text-sm text-gray-700 mt-4 font-semibold">–</p>
+          </div>
+          <div
+            class="h-56 w-[370px] bg-[#f5f5f5] rounded-2xl p-6 shadow-md flex-shrink-0"
+          >
+            <p class="text-base italic">
+              "Baru tau ada aplikasi sepraktis ini buat motor. Keren banget!"
+            </p>
+            <p class="text-sm text-gray-700 mt-4 font-semibold">–</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#000] text-white py-16 mt-10">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-start justify-between gap-10"
+      >
+        <div class="md:w-1/3">
+          <img
+            src="images/Logo-Motocare-4x.png"
+            alt="Motocare Logo"
+            class="w-[442px] mb-6 mt-24"
+          />
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:w-2/3">
+          <div
+            class="bg-[#e5a800] rounded-xl p-6 text-black w-[227px] min-h-[273px]"
+          >
+            <h3 class="text-lg font-semibold mb-3">MOTOCARE</h3>
+            <ul class="space-y-1 text-sm font-medium">
+              <li><a href="#">Beranda</a></li>
+              <li><a href="#">Tentang Kami</a></li>
+            </ul>
+          </div>
+          <div
+            class="bg-[#e5a800] rounded-xl p-6 text-black w-[227px] min-h-[273px]"
+          >
+            <h3 class="text-lg font-semibold mb-3">BANTUAN</h3>
+            <ul class="space-y-1 text-sm font-medium">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Kontak</a></li>
+            </ul>
+          </div>
+          <div
+            class="bg-[#e5a800] rounded-xl p-6 text-black w-[227px] min-h-[273px]"
+          >
+            <h3 class="text-lg font-semibold mb-3">IKUTI KAMI</h3>
+            <ul class="space-y-1 text-sm font-medium">
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="src/main.js"></script>
+  </body>
+</html>
