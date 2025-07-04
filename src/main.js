@@ -63,19 +63,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// ✅ Dropdown
+function toggleDropdown() {
+  const menu = document.getElementById("dropdownMenu");
+  menu.classList.toggle("hidden");
+}
+
+// Menutup dropdown jika klik di luar
+window.addEventListener("click", function (e) {
+  const button = document.getElementById("dropdownButton");
+  const menu = document.getElementById("dropdownMenu");
+
+  if (!button.contains(e.target) && !menu.contains(e.target)) {
+    menu.classList.add("hidden");
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdownBtn = document.getElementById("dropdownButton");
-  const dropdownMenu = document.getElementById("dropdownMenu");
-
-  dropdownBtn.addEventListener("click", function (e) {
-    e.stopPropagation();
-    dropdownMenu.classList.toggle("hidden");
-  });
-
-  document.addEventListener("click", function () {
-    dropdownMenu.classList.add("hidden");
-  });
+  const layananBtn = document.getElementById("layananButton");
+  if (layananBtn) {
+    layananBtn.addEventListener("click", function () {
+      alert("Opss anda harus login dulu");
+      window.location.href = "login.html";
+    });
+  }
 });
 
 // ✅ Preview Gambar

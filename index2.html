@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Motocare - Solusi Motormu</title>
-    <link rel="stylesheet" href="src/output.css" />
+    <link rel="stylesheet" href="dist/output.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -26,6 +26,7 @@
     <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-lg">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
           <div class="flex-shrink-0">
             <a href="#">
               <img
@@ -35,18 +36,20 @@
               />
             </a>
           </div>
-          <!-- Tambahkan class relative pada nav parent -->
+
+          <!-- Navigation -->
           <nav class="hidden md:flex items-center space-x-8 relative">
             <a href="#" class="hover:text-blue-600 transition">Beranda</a>
             <a href="#tentang-kami" class="hover:text-blue-600 transition"
               >Tentang Kami</a
             >
 
-            <!-- Dropdown Layanan -->
-            <div class="relative group">
+            <div class="relative">
+              <!-- Trigger -->
               <button
                 id="dropdownButton"
                 class="flex items-center gap-1 text-black hover:text-blue-600 transition focus:outline-none"
+                onclick="toggleDropdown()"
               >
                 Layanan
                 <img
@@ -59,21 +62,24 @@
               <!-- Dropdown Menu -->
               <div
                 id="dropdownMenu"
-                class="absolute top-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg w-44 hidden flex-col z-50"
+                class="absolute top-full left-0 mt-2 hidden flex-col bg-white border border-gray-200 rounded-lg shadow-lg w-44 z-50"
               >
                 <a
                   href="konsultasi.html"
-                  class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >Konsultasi</a
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 >
+                  Konsultasi
+                </a>
                 <a
                   href="edukasi1.html"
-                  class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >Edukasi</a
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 >
+                  Edukasi
+                </a>
               </div>
             </div>
 
+            <!-- Tombol Profil -->
             <a href="profil.html">
               <button
                 class="bg-[var(--color-button)] hover:bg-[var(--color-button-hover)] text-white px-12 py-2 rounded-lg transition"
